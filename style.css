@@ -1,0 +1,453 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.slider{
+  position: relative;
+   /* max-width: 40rem;  */
+  height: 100vh; 
+  margin: 0 auto;
+  overflow: hidden;
+}
+.newlist{
+   margin: 0 25px;
+}
+.slide{ 
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+.slide > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.upbtn{
+  background: none;
+  border: none;
+  z-index: 15;
+}
+button .fas{
+  color: rgba(255, 255, 255, .5);
+}
+.btn-slide{
+  position:absolute;
+  top:50%;
+  z-index: 10;
+
+  height: 5.5rem;
+  width: 5.5rem;
+  cursor: pointer;
+}
+.prev{
+  left:3rem;
+  transform: translate(-50%, -50%);
+}
+.next{
+  right: 3rem;
+  transform: translate(50%, -50%); 
+}
+.dots-container{
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 10;
+bottom: 5vh;
+left:0;
+right:0;
+z-index: 11;
+/* top:  0; */
+position: absolute;
+}
+.dot{
+  width: 31px;
+  height: 8px;
+  margin: 15px 5px;
+  border-radius: .5rem;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.paraupper{
+  z-index: 2;
+  color: aliceblue;
+  position: absolute;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: 700;
+  padding: 0 50px;
+  font-size: 40px;
+  bottom: 25vh;
+}
+.dot.active{
+background:#272727;
+}
+#slide1::after{
+    background-image: url("/new1.jpg");
+    height: 100%;
+    width: 100%;
+    content: "";
+    z-index: -1;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: absolute;
+    background-position: center;
+}
+#slide2::after{
+    background-image: url("/new2.jpg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    /* background-size: 2550px; */
+    content: "";
+    position: absolute;
+    /* top: 108px; */
+    background-position: center;
+}
+#slide3::after{
+    background-image: url("/3.jpg");
+    height: 100%;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    background-position: center;
+}
+#slide4::after{
+    background-image: url("/4.jpg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    background-position: center;
+}
+.overlay{
+  z-index: 1;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  opacity: .4;
+  cursor: pointer;
+
+}
+.headingTop{
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 40px;
+  /* padding: 50px 0 ; */
+  font-weight: bold;
+}
+.zoom:hover {
+  /* background-color: green; */
+  transform: scale(1.04); 
+  z-index: 111;
+}
+.container11 {
+  
+  margin: 100px auto;
+  max-width: 1000px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding-top: 35px;
+  font-family: 'Roboto', sans-serif !important;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 50px;
+  box-shadow: 0px 2px 30px rgba(80, 82, 87, 0.15);
+}
+.contacthead{
+  padding: 0 0 20px 0;
+  font-family: "Poppins";
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: #1e1e1e;
+}
+input[type=text], select, textarea {
+  font-family: 'Inter';
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  outline: none;
+  transition: 0.5s;
+}
+.paraupper{
+  z-index: 12;
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  bottom: 10vh;
+  left: 10px;
+  
+  width: 100%;
+  font-size: 4rem;
+}
+input[type="radio"] {
+  padding: 12px;
+  background-color: red;
+}
+/*-------------Form-----------  */
+*{
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: 'Lato', sans-serif;
+}
+.wrapper{
+  display: flex;
+  background: #fff;
+  height: max-content;
+  /* width: 400px; */
+  flex-direction: column; 
+  align-items: flex-start;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  /* padding: 30px 15px; */
+  margin: 20px 0;
+  /* box-shadow: 5px 5px 30px rgba(0,0,0,0.2); */
+  /* gap: 2px; */
+}
+.wrapper .option{
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: 5px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0px 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+  
+}
+.wrapper .option .dot{
+  height: 15px;
+  width: 15px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #0069d9;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 1.5s ease ease-in-out;
+}
+input[type="radio"]{
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2,
+#option-3:checked:checked ~ .option-3,
+#option-4:checked:checked ~ .option-4{
+  border-color: rgb(206,240,241);
+  background: rgb(206,240,241);
+  /* background: rgb(231, 136, 136); */
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot,
+#option-3:checked:checked ~ .option-3 .dot,
+#option-4:checked:checked ~ .option-4 .dot{
+  background: rgb(206,240,241);
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before,
+#option-3:checked:checked ~ .option-3 .dot::before,
+#option-4:checked:checked ~ .option-4 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 15px;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span,
+#option-3:checked:checked ~ .option-3 span,
+#option-4:checked:checked ~ .option-4 span{
+  color : rgb(3, 126, 193);
+}
+.paraformhead{
+    color: black;
+    margin: 5px;
+    font-size: 1rem;
+    
+}
+.leftimg{
+  width: 500px;
+}
+.frontsubmit {
+  background: (120, 211, 211, 1) !important;
+  width: 140px;
+  height: 48px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 100px;
+
+  border: none;
+
+  background: #78D3D3;
+}
+.frontsubmit1:hover{
+  position: relative;
+  top: 5px;
+}
+.frontsubmit1 {
+  margin: 0;
+  background: (120, 211, 211, 1) !important;
+  /* width: 140px; */
+  height: max-content;
+  flex-shrink: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 38px;
+  border: none;
+  background: #78D3D3;
+}
+.spanName{
+    margin: 0 13px;
+    padding: 12px 0 ;
+}
+/* .......2....... */
+
+#twooption-1:checked:checked ~ .twooption-1,
+#twooption-2:checked:checked ~ .twooption-2,
+#twooption-3:checked:checked ~ .twooption-3,
+#twooption-4:checked:checked ~ .twooption-4{
+  border-color: rgb(206,240,241);
+  background: rgb(206,240,241);
+  /* background: rgb(231, 136, 136); */
+}
+#twooption-1:checked:checked ~ .twooption-1 .dot,
+#twooption-2:checked:checked ~ .twooption-2 .dot,
+#twooption-3:checked:checked ~ .twooption-3 .dot,
+#twooption-4:checked:checked ~ .twooption-4 .dot{
+  background: rgb(206,240,241);
+}
+#twooption-1:checked:checked ~ .twooption-1 .dot::before,
+#twooption-2:checked:checked ~ .twooption-2 .dot::before,
+#twooption-3:checked:checked ~ .twooption-3 .dot::before,
+#twooption-4:checked:checked ~ .twooption-4 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 15px;
+}
+#twooption-1:checked:checked ~ .twooption-1 span,
+#twooption-2:checked:checked ~ .twooption-2 span,
+#twooption-3:checked:checked ~ .twooption-3 span,
+#twooption-4:checked:checked ~ .twooption-4 span{
+  color : rgb(3, 126, 193);
+}
+
+/* ------------3--------- */
+#threeoption-1:checked:checked ~ .threeoption-1,
+#threeoption-2:checked:checked ~ .threeoption-2,
+#threeoption-3:checked:checked ~ .threeoption-3,
+#threeoption-4:checked:checked ~ .threeoption-4{
+  border-color: rgb(206,240,241);
+  background: rgb(206,240,241);
+  /* background: rgb(231, 136, 136); */
+}
+#threeoption-1:checked:checked ~ .threeoption-1 .dot,
+#threeoption-2:checked:checked ~ .threeoption-2 .dot,
+#threeoption-3:checked:checked ~ .threeoption-3 .dot,
+#threeoption-4:checked:checked ~ .threeoption-4 .dot{
+  background: rgb(206,240,241);
+}
+#threeoption-1:checked:checked ~ .threeoption-1 .dot::before,
+#threeoption-2:checked:checked ~ .threeoption-2 .dot::before,
+#threeoption-3:checked:checked ~ .threeoption-3 .dot::before,
+#threeoption-4:checked:checked ~ .threeoption-4 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 15px;
+}
+#threeoption-1:checked:checked ~ .threeoption-1 span,
+#threeoption-2:checked:checked ~ .threeoption-2 span,
+#threeoption-3:checked:checked ~ .threeoption-3 span,
+#threeoption-4:checked:checked ~ .threeoption-4 span{
+  color : rgb(3, 126, 193);
+} 
+/* -----------4-------------- */
+#fouroption-1:checked:checked ~ .fouroption-1,
+#fouroption-2:checked:checked ~ .fouroption-2,
+#fouroption-3:checked:checked ~ .fouroption-3,
+#fouroption-4:checked:checked ~ .fouroption-4,
+#fouroption-5:checked:checked ~ .fouroption-5{
+  border-color: rgb(206,240,241);
+  background: rgb(206,240,241);
+  /* background: rgb(231, 136, 136); */
+}
+#fouroption-1:checked:checked ~ .fouroption-1 .dot,
+#fouroption-2:checked:checked ~ .fouroption-2 .dot,
+#fouroption-3:checked:checked ~ .fouroption-3 .dot,
+#fouroption-4:checked:checked ~ .fouroption-4 .dot,
+#fouroption-5:checked:checked ~ .fouroption-5 .dot{
+  background: rgb(206,240,241);
+}
+#fouroption-1:checked:checked ~ .fouroption-1 .dot::before,
+#fouroption-2:checked:checked ~ .fouroption-2 .dot::before,
+#fouroption-3:checked:checked ~ .fouroption-3 .dot::before,
+#fouroption-4:checked:checked ~ .fouroption-4 .dot::before,
+#fouroption-5:checked:checked ~ .fouroption-5 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 15px;
+}
+#fouroption-1:checked:checked ~ .fouroption-1 span,
+#fouroption-2:checked:checked ~ .fouroption-2 span,
+#fouroption-3:checked:checked ~ .fouroption-3 span,
+#fouroption-4:checked:checked ~ .fouroption-4 span,
+#fouroption-5:checked:checked ~ .fouroption-5 span{
+  color : rgb(3, 126, 193);   
+}
+.frontsubmit:hover{
+  position: relative;
+  top:2px;
+}
+@media screen and (max-width:600px) {
+  .paraupper{
+    /* padding: 0 10px; */
+    font-size: 30px;
+    bottom: 12vh;
+    left: -10px;
+  }
+  .leftimg{
+    width: 320px;
+  }
+  .headingTop{
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 40px;
+    /* padding: 50px 0 ; */
+    font-weight: bold;
+  }
+}
